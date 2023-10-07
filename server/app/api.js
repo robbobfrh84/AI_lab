@@ -1,20 +1,24 @@
 const express = require('express')
-const { reqTextPrompt } = require('./ai.js')
+const { ai } = require('./ai.js')
 
 const buildAPI = function() {
   const app = express()
   const PORT = process.env.PORT || 8080;
   app.get('/favicon.ico', (req, res) => res.status(204));
   app.get('/', (req, res)=>{res.send(`<h1> AI Cards </h1> <hr> <h3> API😊 Nothing at root url, try adding an endpoint`)})
-  app.get('/create',  asyncWrapper(getTextPrompt))
+  app.get('/create_object',  asyncWrapper(queryRequest))
+  app.get('/create_image',  asyncWrapper(queryRequest))
+  app.get('/create_object_image',  asyncWrapper(queryRequest))
   app.get('*', (req, res) => {res.status(404).send('<h1>404<h1>') }) // * ALWAYS HAVE AS LAST ROUTE
   app.listen(PORT, ()=>{ console.log(`🌋  API Server url: http://localhost:${PORT}/ 🏡`) })
 }
 
-async function getTextPrompt(req, res) {
+
+async function queryRequest(req, res) {
   res.header("Access-Control-Allow-Origin", "*")
-  const response = await reqTextPrompt( req.query )
-  return { endpoint: "create", request: req.query, response }
+  const endpoint = req.route.path.split('/')[1]
+  const response = await ai[endpoint](req.query)
+  return { endpoint, query: req.query, response }
 }
 
 /* ⚙️ toolkit 🛠️ */

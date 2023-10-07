@@ -8,15 +8,23 @@
 </head>
 
 <body>
-  <h3>AI Cards</h3>
+  <h1>AI Cards</h1>
 
   <hr> 
-  <h3>Test Zone</h3>
-  <button onclick="testImage()">Test Image</button><br><br>
+  <h2>Test Zone</h2>
   Theme: <input id="themeInput" type="text" value="Gopher">
   <button onclick="createObject()">Create Card</button><br>
-  <br>
-  <textarea id="responseObjTextArea" cols="50" rows="30"></textarea>
+  <textarea id="responseObjTextArea" cols="50" rows="15"></textarea>
+  <div id="promptObjectImageDiv"></div>
+  <button onclick="createObjectImage()">Create Object Image</button><br>
+  <hr>
+  Image Prompt: 
+  <input id="imagePromptInput" type="text" style="width: 400px;"
+    value="A Dandelion blowing on on a ladybug" 
+  ><br>
+  <button onclick="createImage()">Create Image</button><br>
+  <div id="promptImageDiv"></div>
+
 
 </body>
 

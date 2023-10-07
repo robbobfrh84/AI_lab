@@ -5,22 +5,32 @@
 - ✅ Setup Desktop codebase
 - ✅ Get basic function working
 - ✅ Copy/paste into AI_lab as `openai_basic_server_client_hash_pages`
-- OK! Time to Test Images!
-- Test image: Add example to `AI_Labs`:https://platform.openai.com/docs/guides/images/usage
-  - ? Add that example to AI_Labs ?
+- 🟡 OK! Time to Test Images!
+  - fromt end api.js need to be refactered into dynamic.
+  - add BASIC loader: https://www.w3schools.com/howto/howto_css_loader.asp
+  - Re org UI, move Test Image down and add input box rename button `Create Image`
+  - After Card is created, reveal button to create image from object
+    - Allow editing of object. 
+  - Let's add `create_object_image` after you retreive an object it shows. 
+  - Create new AI_Labs folder: `openai_image_object_client`
+  - Add to Docs > https://platform.openai.com/docs/guides/images/usage
+  - Add that example to AI_Labs
 
 - Write out raw UI outline for Character cards. 
 
 ### Checkpoints
 
-- Local Stack Setup. Create `AI_Lab` Template(s).
-- 
+- 🟡 Local Stack Setup. Create `AI_Lab` Template(s).
+- Tinker with Raw UI flow to create objects.
+  - You wanna get to the point where you feel comfortable preping a UI. 
 
 ### MVP Breakdown
 
 - Complete `README.md` for public (See palm-ai-api for example)
 - Unordered todos...
+  - Add an "X" to cancel... if possible?
   - Create Icon
+  - Create loader: what about cards sifting from front to be animated? 
 
 
 ### MVP Overview

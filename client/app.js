@@ -1,5 +1,6 @@
 const _config =  {
   url: "http://localhost:8080/",
+  workingObject: {},
 }
 
 window.onload = ()=>{
@@ -19,17 +20,41 @@ function checkURL() {
 }
 
 /* 👉 * * * * Responses * * * * 👉 */
-function createObjectResponse(obj) {
-  console.log('obj:',obj)
-  responseObjTextArea.innerHTML = JSON.stringify(obj,null,2)
+function createObjectResponse(data) {
+  console.log('data:', data)
+  _config.workingObject = data
+  responseObjTextArea.innerHTML = JSON.stringify(data,null,2)
 }
+
+function createImageResponse(data) {
+  console.log('data:', data)
+  promptImageDiv.innerHTML = /*html*/`
+    <img id="testImage" width="400" src="${data.response}">
+  `
+}
+
+function createImageObjectResponse(data) {
+  console.log('data:', data)
+  promptObjectImageDiv.innerHTML = /*html*/`
+    <img id="testImage" width="400" src="${data.response}">
+  `
+}
+
 
 /* ⏺️ * * * * Triggers * * * * ⏺️ */
-function testImage() {
-  
-}
-
 function createObject() {
-  console.log('value:',themeInput.value)
   createObjectAPI(themeInput.value)
 }
+
+function createImage() {
+  createImageAPI(imagePromptInput.value)
+}
+
+function createObjectImage() {
+  console.log('_config.workingObject:',_config.workingObject)
+  createObjectImageAPI({
+    theme: _config.workingObject.query.theme,
+    object: JSON.stringify(_config.workingObject.response)
+  })
+}
+
