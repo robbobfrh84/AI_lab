@@ -1,5 +1,7 @@
 <!DOCTYPE html><html lang='en'>
-<title> AI Cards </title>
+<!-- <title> Open AI: Basic Server Client Example </title> -->
+<title> Open AI: Object to Image Example </title>
+
 <!-- <link rel='icon' href='link/or/path'>  -->
 <head>
   <meta charset='UTF-8'><meta http-equiv='X-UA-Compatible' content='ie=edge'>
@@ -8,26 +10,37 @@
 </head>
 
 <body>
-  <h1>AI Cards</h1>
+  <!-- <h1> Open AI: Basic Server Client Example </h1> -->
+  <h1> Open AI: Object to Image Example </h1><hr> 
 
-  <hr> 
-  <h2>Test Zone</h2>
+
+  <!-- 🐣 Create Object 🐣 -->
   Theme: <input id="themeInput" type="text" value="Gopher">
-  <button onclick="createObject()">Create Card</button><br>
-  <textarea id="responseObjTextArea" cols="50" rows="15"></textarea>
-  <div id="promptObjectImageDiv"></div>
-  <button onclick="createObjectImage()">Create Object Image</button><br>
-  <hr>
-  Image Prompt: 
-  <input id="imagePromptInput" type="text" style="width: 400px;"
-    value="A Dandelion blowing on on a ladybug" 
-  ><br>
-  <button onclick="createImage()">Create Image</button><br>
-  <div id="promptImageDiv"></div>
+  <button onclick="createObject()">
+    Create Object
+  </button><br>
+  <textarea id="responseObjTextArea" cols="50" rows="15"></textarea><br>
 
+  <!-- 🗣️ Create Object Describe 🗣️ -->
+  <button id="createObjectDescribeBtn" class="hide" onclick="createObjectDescribe()">
+    Create Object Describe
+  </button><br>
+  <textarea id="responseDescribeTextArea" class="hide" cols="50" rows="15"></textarea><br>
 
+  <!-- 📸 Create Image 📸 -->
+  <button id="createImageBtn" class="hide" onclick="createImage()">
+    Create Image from Description
+  </button><br>
+  <none id="imageDiv"></none>
+  
+
+  <!-- 🔄 LOADER 🔄 -->
+  <div id="loader" class="loader-container">
+    <div class="centered-loader"><div class="loader-image"></div></div>
+  </div>
 </body>
 
 <script src='app.js'></script>
-<script src='js/api.js'></script>
+<script src='js/events.js'></script>
+<script src='js/requests.js'></script>
 </html>

@@ -1,5 +1,10 @@
 ### Where I left off...
 
+- Setting up example code:
+- II think I need to change the structure to have both
+  - Theme: Animal (this could be for)
+  - What: Gopher (our What: )
+
 ### To  Do 🟡✅
 
 - ✅ Setup Desktop codebase
@@ -20,7 +25,7 @@
 
 ### Checkpoints
 
-- 🟡 Local Stack Setup. Create `AI_Lab` Template(s).
+- 🟡 Local Stack Setup. Create `AI_Lab` Template(s).
 - Tinker with Raw UI flow to create objects.
   - You wanna get to the point where you feel comfortable preping a UI. 
 

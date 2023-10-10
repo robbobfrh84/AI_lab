@@ -1,2 +1,2 @@
-const { buildAPI } = require("./app/api.js")
+const { buildAPI } = require("./app/server.js")
 buildAPI()
