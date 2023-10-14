@@ -1,6 +1,6 @@
 ### Where I left off...
 
-- Refactoring Example Code to be replaced in `Tut...`
+- The source code was moved and repacked to: 
 
 ### To  Do 🟡✅
 - Rather than config, use innerHTML of input boxes, so it's dynamic. You can probably remove the object from the _config. 
