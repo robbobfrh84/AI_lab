@@ -1,15 +1,12 @@
 ### Where I left off...
 
-- The source code was moved and repacked to: 
+- The source code was moved and repacked to: https://github.com/robbobfrh84/Tutorials_Examples/tree/main/AI_Lab/openai_template_image_flow
 
 ### To  Do 🟡✅
-- Rather than config, use innerHTML of input boxes, so it's dynamic. You can probably remove the object from the _config. 
-- Add to example Docs > https://platform.openai.com/docs/guides/images/usage
-- Write out raw UI outline for Character cards. 
+- Need to copy/paste the `client` code and re-name **AI Character Card Creator** and review/gut unused code from that and start from scratch...  
 
 ### Checkpoints
 
-- 🟡 Local Stack Setup. Create `AI_Lab` Template(s).
 - Tinker with Raw UI flow to create objects.
   - You wanna get to the point where you feel comfortable preping a UI. 
   - THOUGHT: II think I need to change the structure to have both...
@@ -27,7 +24,7 @@
 
 ### MVP Overview
 
-- Working Title: Card Creator AI
+- Working Title: **AI Character Card Creator** 
 - 3x Themes with working examples
   - **Character Deck**: Built in back static image - click flips over to reveal. 
     - Example: Create a couple D&D like examples and generate a deck of ~50-100
